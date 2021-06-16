@@ -21,13 +21,13 @@
             margin-left: 20px;
         }
 
-        h1 {
+         h1 {
             height: 40px;
             width: 80%;
             margin-left: 50px;
             text-align: center;
             background-color: coral;
-        }
+        } 
 
         #image {
             width: 450px;
@@ -44,13 +44,13 @@
             text-decoration: none;
             font-size: 18px;
             float: right;
-        }
+        } 
 
     </style>
 </head>
 
 <body>
-    <h1>Welcome to Dashboard <a class="dropdown-item" href="logout.php">Logout</a></h1>
+    <h1>Welcome to Dashboard <a class="dropdown-item" href="{{route('login')}}">Logout</a></h1>
     <img id="image"
         src="https://images.unsplash.com/photo-1597666864156-2e7ae49fca5a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW91bnQlMjBldmVyZXN0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
     <img id="image"
@@ -70,7 +70,7 @@
         from the north in Tibet. While not posing substantial technical climbing challenges on the standard route,
         Everest presents dangers such as altitude sickness, weather, and wind, as well as significant hazards from
         avalanches and the Khumbu Icefall. As of 2019, over 300 people have died on Everest,[7] many of whose bodies
-        remain on the mountain.[8]</p>
-</body>
+        remain on the mountain.[8]</p> 
+</body> 
 
 </html>

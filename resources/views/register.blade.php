@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Login Form </title>
-    {{-- <link href="{{url('assets/css/styles.css')}}" rel="stylesheet" /> --}}
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
@@ -89,7 +89,9 @@
                                 <div class="card-header">
                                     <h3 class="text-center font-weight-light my-4">Create Account</h3>
                                 </div>
+                                <br>
                                 <div class="card-body">
+
                                     <form action="{{ url('post-register') }}" method="POST" id="formContainer">
                                         {{ csrf_field() }}
 
@@ -97,9 +99,11 @@
                                             <label class="col-md-4 col-form-label text-md-right" for="inputFirstName">Full Name</label>
                                             <input class="form-control" id="inputFirstName" type="text" name="name"
                                                 placeholder="Enter Full Name" />
+
                                             @if ($errors->has('name'))
                                                 <span class="error">{{ $errors->first('name') }}</span>
                                             @endif
+                                            
                                         </div>
 
                                         <div class="form-group">

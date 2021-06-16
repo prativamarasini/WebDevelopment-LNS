@@ -101,7 +101,7 @@
                             <img id="img1"
                                 src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?cs=srgb&dl=background-beverage-brown-414645.jpg&fm=jpg">
                             <a href="#"><img id="cross" src="https://image.flaticon.com/icons/svg/148/148766.svg"></a>
-
+<br><br>
 
                             <form action="{{ url('post-login') }}" method="POST" id="formContainer">
                                 {{ csrf_field() }}
@@ -139,7 +139,7 @@
                             </form>
                         </div>
                         <div class="card-footer text-center">
-                            <div class="small"><a href="{{ url('register') }}">Need an account? Sign up!</a></div>
+                            <div class="small"><a href="{{url('register') }}">Need an account? Sign up!</a></div><br><br>
                         </div>
                     </div>
                 </div>

@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login', 'AuthController@index');
+Route::get('login', 'AuthController@index')->name('login');
 Route::post('post-login', 'AuthController@postLogin'); 
 Route::get('register', 'AuthController@register');
 Route::post('post-register', 'AuthController@postRegister'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
+Route::get('index','DashboardController@index')->name('index');
+Route::get('home','DashboardController@show');

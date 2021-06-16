@@ -31,13 +31,13 @@ class AuthController extends Controller
             // Authentication passed...
             return redirect()->intended('dashboard');
         }
-        return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
+        return Redirect::to("login");
     }
  
     public function postRegister(Request $request)
     {  
         request()->validate([
-        'name' => 'required',
+        'name' => 'required|regex:/^[\pL\s\-]+$/u', 
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6',
         ]);
@@ -45,8 +45,9 @@ class AuthController extends Controller
         $data = $request->all();
  
         $check = $this->create($data);
+        return Redirect::to("login");
        
-        return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+        // return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
      
     public function dashboard()
@@ -55,7 +56,7 @@ class AuthController extends Controller
       if(Auth::check()){
         return view('dashboard');
       }
-       return Redirect::to("login")->withSuccess('Opps! You do not have access');
+       return Redirect::to("login");
     }
  
     public function create(array $data)
